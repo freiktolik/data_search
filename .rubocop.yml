@@ -1,0 +1,99 @@
+AllCops:
+  TargetRubyVersion: 2.7.2
+  Exclude:
+    - 'lib/spec/spec_helper.rb'
+
+Layout/LineLength:
+  Max: 120
+
+Metrics/CyclomaticComplexity:
+  Max: 10
+
+Metrics/ClassLength:
+  Max: 120
+
+Metrics/ModuleLength:
+  Max: 120
+
+Style/GuardClause:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 5
+
+Metrics/BlockLength:
+  Exclude:
+    - lib/spec/**/*
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Documentation:
+  Enabled: false
+
+Layout/SpaceBeforeBrackets:
+  Enabled: true
+
+Lint/AmbiguousAssignment:
+  Enabled: true
+
+Lint/DeprecatedConstants:
+  Enabled: true
+
+Lint/DuplicateBranch:
+  Enabled: true
+
+Lint/DuplicateRegexpCharacterClassElement:
+  Enabled: true
+
+Lint/EmptyBlock:
+  Enabled: true
+
+Lint/EmptyClass:
+  Enabled: true
+
+Lint/LambdaWithoutLiteralBlock:
+  Enabled: true
+
+Lint/NoReturnInBeginEndBlocks:
+  Enabled: true
+
+Lint/RedundantDirGlobSort:
+  Enabled: true
+
+Lint/ToEnumArguments:
+  Enabled: true
+
+Lint/UnexpectedBlockArity:
+  Enabled: true
+
+Lint/UnmodifiedReduceAccumulator:
+  Enabled: true
+
+Style/ArgumentsForwarding:
+  Enabled: true
+
+Style/CollectionCompact:
+  Enabled: true
+
+Style/DocumentDynamicEvalDefinition:
+  Enabled: true
+
+Style/EndlessMethod:
+  Enabled: true
+
+Style/HashExcept:
+  Enabled: true
+
+Style/NegatedIfElseCondition:
+  Enabled: true
+
+Style/NilLambda:
+  Enabled: true
+
+Style/RedundantArgument:
+  Enabled: true
+
+Style/SwapValues:
+  Enabled: true
+
