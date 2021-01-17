@@ -13,9 +13,14 @@ class ProgrammingLanguage
 
   # checking whether searching values are in the record
   def call(searching_values)
+    searching_values.all? { |word| record_attribute_values.include?(word) }
   end
 
   private
 
   attr_accessor :name, :type, :designed_by
+
+  def record_attribute_values
+    instance_variables.map(&method(:instance_variable_get)).join(' ')
+  end
 end

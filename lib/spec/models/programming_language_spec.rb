@@ -13,15 +13,17 @@ describe ProgrammingLanguage do
     described_class.new(programming_language)
   end
 
-  context 'when record match' do
+  describe 'when record match' do
+    shared_examples '#call method return true' do
+      it { expect(subject.call(searching_values)).to eq true }
+    end
+
     context 'searching values' do
       let(:searching_values) do
         ['Common']
       end
 
-      it '#call method return true' do
-        expect(subject.call(searching_values)).to eq true
-      end
+      it_behaves_like '#call method return true'
     end
 
     context 'searching values' do
@@ -29,9 +31,7 @@ describe ProgrammingLanguage do
         %w[Lisp Common]
       end
 
-      it '#call method return true' do
-        expect(subject.call(searching_values)).to eq true
-      end
+      it_behaves_like '#call method return true'
     end
 
     context 'searching values' do
@@ -39,21 +39,21 @@ describe ProgrammingLanguage do
         %w[Interactive Lisp Common]
       end
 
-      it '#call method return true' do
-        expect(subject.call(searching_values)).to eq true
-      end
+      it_behaves_like '#call method return true'
     end
   end
 
-  context "when record didn't match" do
+  describe "when record didn't match" do
+    shared_examples '#call method return false' do
+      it { expect(subject.call(searching_values)).to eq false }
+    end
+
     context 'searching values' do
       let(:searching_values) do
         ['ECMAScript']
       end
 
-      it '#call method return false' do
-        expect(subject.call(searching_values)).to eq false
-      end
+      it_behaves_like '#call method return false'
     end
 
     context 'searching values' do
@@ -61,9 +61,7 @@ describe ProgrammingLanguage do
         %w[ECMAScript Scripting]
       end
 
-      it '#call method return false' do
-        expect(subject.call(searching_values)).to eq false
-      end
+      it_behaves_like '#call method return false'
     end
   end
 end
